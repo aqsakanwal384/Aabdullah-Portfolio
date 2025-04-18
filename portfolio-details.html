@@ -1,0 +1,370 @@
+<script>
+  const projects = [
+    {
+      title: "Consortia",
+      description: "Consortia: A real-estate platform powered by blockchain, smart contracts and NFTs (mint properties as NFTs) with KYC and many other sophisticated business processes and third party integrations (zendesk, Attom API, Computer Vision APIs to identify deed data etc). The theme was designed from scratch. This is all deployed in a highly scalable AWS environment with Amplify, S3, Route53, ElasticBeanstalk, Cognito, RDS etc.We used NLP and Transformers to do identify verification for KYC purposes in this enterprise real estate NFT project. We used the huggingface NLP models to verify credentials (like passport, driving license etc) and correlating property deed data for matching. We’ve also done OCR to scan deed data and grab named entities and detect sentence similarity.",
+      image: "assets/img/portfolio/consortia.png",
+      category: "Web App",
+      url: "https://reconsortia.com/",
+      tag: "consortia"
+    },
+    {
+      title: "ProspectX",
+      description: "ProspectX - A custom CRM for real estate agents developed in Django and React, the platform is similar to Insightly and Bitrix24 with modules like custom website development, Emails, running, and managing your marketing campaigns, your company tasks, and financing through one portal.",
+      image: "assets/img/portfolio/prospectx.png",
+      category: "Web App",
+      url: "https://prospectx.com/",
+      tag: "prospectx"
+    },
+    {
+      title: "All In Academy",
+      description: "All in Academy: SaaS-based application with multiple payment gateways integrated and live video streaming within the platform. Our tech stack for this project is MERN and deployed over AWS. Please have a review of these Figma design screens and use cases for your better understanding.",
+      image: "assets/img/portfolio/all in academy.jpg",
+      category: "Web App",
+      url: "https://www.allin.academy/en/",
+      tag: "all-in-academy"
+    },
+    {
+      title: "Private Therapy Clinic",
+      description: "Private Therapy Clinic - A convenient way to get professional help with registered therapists online or face to face, this includes talking to therapists such as Counsellors, Psychotherapists, Psychologists, and also Psychiatrists who are medical doctors that can prescribe medication if required.",
+      image: "assets/img/portfolio/private-therapy.png",
+      category: "Web App",
+      url: "https://theprivatetherapyclinic.co.uk/",
+      tag: "private-therapy-clinic"
+    },
+    {
+      title: "Clothrealm",
+      description: "Clotherealm - NFT Marketplace for Clothing NFTs similar to Opeansea on Ethereum and Polygon. Clotherealm is an NFT marketplace focused on the fashion industry and clothing. Marketplace based on Ethereum and Polygon blockchain. The marketplace connects with Metamask wallet.",
+      image: "assets/img/portfolio/clothrealm.png",
+      category: "Web App",
+      url: "https://clotherealm.netlify.app/",
+      tag: "Clothrealm"
+    },
+    {
+      title: "Medicore",
+      description: "Medicore - Medicore is a combo app to find doctors, Pharmacies & Hospitals near you, you can find doctors within your city, check for pharmacies near you, or even find a list of hospitals and compare services. Medicore connects you with everything you need to take care of yourself and your loved ones. Booking doctor appointments, Online doctor consultations has never been easier.",
+      image: "assets/img/portfolio/medicore.png",
+      category: "Web App",
+      url: "https://medi-core.com/en/?ckattempt=1",
+      tag: "medicore"
+    },
+    {
+      title: "ConsoliADS",
+      description: "We have developed a product called ConsoliAds, which is an ads mediation platform for games.",
+      image: "assets/img/portfolio/consoliads.png",
+      category: "Web App",
+      url: "https://consoliads.com/",
+      tag: "ConsoliADS"
+    },
+    {
+      title: "Fliproom",
+      description: "Fliproom is a cross-platform eCommerce marketplace for buying and selling premium sneakers. Built using Ionic with Angular (Web, iOS, Android), Node.js for the backend, and MySQL for data management, it offers a secure, user-friendly experience tailored for sneaker enthusiasts and resellers.",
+      image: "assets/img/portfolio/fliproom.jpeg",
+      category: "Web App",
+      url: "https://www.fliproom.io/",
+      tag: "Fliproom"
+    },
+    {
+      title: "Safetycheck",
+      description: "SafetyCheck is specifically built for small and medium businesses in the construction industry, offering a faster, easier, and more effective way to manage safety compliance—at a fraction of the cost of other safety management systems.",
+      image: "assets/img/portfolio/safetycheck.jpeg",
+      category: "Web App",
+      url: "https://safetycheck.nz/",
+      tag: "Safetycheck"
+    },
+    {
+      title: "Healthread",
+      description: "Healthread is a community of people helping each other to take control of and understand their health from the perspective of shared experiences. This common thread between individuals can allow us all to better understand our own personal health, enlighten us and help us all cope with our health issues.",
+      image: "assets/img/portfolio/healthread.png",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.healthread.app&hl=en",
+      iosUrl: "https://apps.apple.com/us/app/healthread/id1498450688",
+      tag: "Healthread"
+    },
+
+    {
+      title: "Hamyk",
+      description: "On hamyk, connect with everyone on your campus.Displaying the newest and most liked content, you can easily see what’s happening on your campus and interact with other students. Hamyk is content first, meaning you don’t have to build a large following to start receiving engagement on your posts. Every new post is displayed at the top of NEW giving everyone the same opportunity to be seen.",
+      image: "assets/img/portfolio/hamyk.png",
+      category: "Mobile App",
+      iosUrl: "https://apps.apple.com/ro/app/hamyk/id1313026036",
+      tag: "Hamyk"
+    },
+    {
+      title: "Amply",
+      description: "Discover Amply by AiBorne, a versatile platform engineered to digitise & automate field workflows across a multitude of industry sectors. Utilising our potent and intuitive suite of tools, organisations can seamlessly create, deploy, and manage custom Standard Operating Procedures (SOPs) that cater to their unique needs.",
+      image: "assets/img/portfolio/amply.png",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.aiborne.amplyv1&hl=en",
+      tag: "Amply"
+    },
+    {
+      title: "Wild Chain",
+      description: "WildChain: In this project, we are using blockchain technology which helps us not only to create animals token that is provable digitally but also help us to improve transparency as all donation are in a public ledger and helps to ensure that all donations are using in a responsible way.",
+      image: "assets/img/portfolio/wildchain.jpeg",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=io.wildchain.app",
+      tag: "wild-chain"
+    },
+
+    {
+      title: "Tello Talk",
+      description: "Tello Talk (Chat Application) We have worked on chat/messaging applications similar to What's App and We Chat in our past work experience, we were recently working for a startup that raised $1.8 million on their social chat application.",
+      image: "assets/img/portfolio/tellotalk.jpeg",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.udna.tellotalk&hl=en",
+      iosUrl: "https://apps.apple.com/pk/app/tellotalk-voice-video-chat/id1072630269",
+      tag: "tello-talk"
+    },
+    {
+      title: "Mooner App",
+      description: "Mooner App - A Location-based Multiservice Marketplace similar to TaskRabbit where buyers and sellers can enter into a contract for anything (plumbing, moving, software development, etc), like a freelance marketplace. The marketplace is solely developed for moonercoin.io and users can pay each other in fiat or crypto for services.",
+      image: "assets/img/portfolio/mooner.png",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.app.mooner&hl=en",
+      iosUrl: "https://apps.apple.com/pk/app/mooner-services-on-demand/id1554244768",
+      tag: "mooner-app"
+    },
+    {
+      title: "Preevo",
+      description: "With Preevo, you can book chauffeur-driven car hire services, city-to-city trips and seamless airport transfers for yourself or others.Bespoke Service: Your personal chauffeur will gladly assist with your needs and provide personalised service.",
+      image: "assets/img/portfolio/preevo.png",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.preevoclient&hl=en",
+      tag: "preevo"
+    },
+
+    {
+      title: "Cal Ai",
+      description: "Cal AI is a smart nutrition and fitness app that helps you reach your body goals with quick meal tracking and personalized plans.",
+      image: "assets/img/portfolio/cal-ai.png",
+      category: "Mobile App",
+      iosUrl: "https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616",
+      tag: "Cal-ai"
+    },
+    {
+      title: "Pinoyaya",
+      description: "Pinoyaya Care makes finding reliable babysitters and housekeepers fast and easy. With verified professionals, real-time availability, and flexible hourly booking, you can connect with trusted help whenever you need it. The app offers easy login, in-app chat, booking updates, and multiple payment options, ensuring a smooth and secure experience from start to finish.",
+      image: "assets/img/portfolio/pinoyaya.jpeg",
+      category: "Mobile App",
+      androidUrl: "https://play.google.com/store/apps/details?id=app.yaya.user&hl=en",
+      iosUrl: "https://play.google.com/store/apps/details?id=app.yaya.user&hl=en",
+      tag: "pinoyaya"
+    },
+  ];
+
+  function getTagFromURL() {
+    const path = window.location.search;
+    console.log("Window params: ", window.location)
+    const segments = path.split('=');
+    return segments[segments.length - 1];
+  }
+
+  function displayProjectDetail() {
+    let tag = getTagFromURL();
+    const project = projects.find(p => p.tag === tag);
+
+    if (!project) {
+      document.querySelector("#portfolio-details .container").innerHTML = "<p>Project not found.</p>";
+      return;
+    }
+
+    document.getElementById("project-title").textContent = project.title;
+    document.getElementById("project-description").textContent = project.description;
+    document.getElementById("project-image").src = project.image;
+    document.getElementById("project-category").textContent = project.category;
+
+    // Category badges
+    // const catEl = document.getElementById("project-category");
+    // catEl.innerHTML = "";
+    // project.category.forEach(cat => {
+    //   const badge = document.createElement("span");
+    //   badge.textContent = cat;
+    //   badge.className = "badge bg-primary me-1";
+    //   catEl.appendChild(badge);
+    // });
+
+    // document.getElementById("project-client").textContent = project.client || "N/A";
+    const urlEl = document.getElementById("project-url");
+    if (project.url) {
+      urlEl.href = project.url;
+      urlEl.textContent = project.url;
+    } else {
+      urlEl.remove();
+    }
+
+
+    const androidUrlEl = document.getElementById("android-link");
+    if (project.androidUrl) {
+      androidUrlEl.href = project.androidUrl;
+      androidUrlEl.target = "_blank";
+    } else {
+      androidUrlEl.remove();
+    }
+
+    const iosUrlEl = document.getElementById("ios-link");
+    if (project.iosUrl) {
+      iosUrlEl.href = project.iosUrl;
+      iosUrlEl.target = "_blank";
+    } else {
+      iosUrlEl.remove();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", displayProjectDetail);
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Abdullah Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Abdullah Tanzeel</h1>
+    </a>
+
+    <div class="social-links text-center">
+  <!--<a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>-->
+      <a target="_blank" href="mailto:abdullah.tanz104@gmail.com" class="gmail"><i class="bi bi-envelope-fill"></i></a>
+      <a target="_blank" href="https://teams.live.com/l/invite/FEAVnM43SMQuf-QGwE" class="teams"><i class="bi bi-microsoft-teams"></i></a>
+      <a target="_blank" href="https://github.com/TeknoArts" class="teams"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+       
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+<section id="portfolio-details" class="portfolio-details section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <img id="project-image" src="" alt="Project Image" class="img-fluid w-100 rounded">
+      </div>
+
+      <div class="col-lg-4">
+        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+          <h3>Project information</h3>
+          <ul id="details-list">
+            <li><strong>Category</strong>: <span id="project-category"></span></li>
+            <!-- <li><strong>Client</strong>: <span id="project-client"></span></li> -->
+            <li><strong>Project URL</strong>: <a href="#" target="_blank" id="project-url">Visit</a></li>
+            <li>
+              <div style="display:flex; justify-content: center; align-items: center; gap: 35px;">
+                <a id="android-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play" style="width:30px;">
+                </a>
+                <a id="ios-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="App Store" style="width:30px;">
+                </a>
+              </div>
+                
+            </li>
+          </ul>
+        </div>
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+          <h2 id="project-title"></h2>
+          <p id="project-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Portfolio Details Section -->
+
+  </main>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
